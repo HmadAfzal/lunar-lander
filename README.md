@@ -46,14 +46,12 @@ Over a whole episode the bonus telescopes to `phi_end - phi_start`, so sitting i
 **Lesson:** reward change, not state. A reward for sitting in a good spot teaches the agent to sit there forever.
 
 ## Setup
-
-Needs Python 3.12 (box2d and PyTorch don't build cleanly on newer versions), `swig`, and a C++ compiler.
+Developed and tested on Python 3.14 (Manjaro). Needs `swig` and a C++ compiler, since `box2d-py` builds from source.
 
 ```bash
 # Arch / Manjaro
 sudo pacman -S swig gcc
 
-uv python pin 3.12
 uv sync
 ```
 
