@@ -4,6 +4,12 @@ Training a PPO agent to land a rocket in Gymnasium's `LunarLander-v3`, then writ
 
 The short version: a "+1 per frame while upright and slow" bonus makes the agent hover until the time limit instead of landing. Paying for *progress* instead of *position* fixes it.
 
+## Clips
+
+| Fixed reward: lands | Hover bonus: hovers forever |
+|:---:|:---:|
+| ![Fixed agent landing](assets/landing.gif) | ![Hover agent](assets/hover.gif) |
+
 ## Results
 
 All scores are measured on the **plain environment with my reward wrapper off**, 20 episodes per run, so my own bonus can't inflate the numbers. Training: PPO (Stable-Baselines3, 2x64 MLP), 1M timesteps, 16 parallel envs.
